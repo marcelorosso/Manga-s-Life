@@ -1,0 +1,49 @@
+// -------------------- HEADER
+
+header {
+    height: 480px;
+    width: 100%;
+
+    @media (max-width: 575px) {
+        height: 770px;
+    }
+    @media (min-width: $sm) and (max-width: $md) {
+        height: 700px;
+    }
+
+    // navbar
+
+    #navbarSupportedContent {
+        display: block;
+        
+        @media (min-width: 577px) and (max-width: 767px) {
+            justify-content: center;
+            font-weight: bold;
+            align-items: center;
+        }
+        .dissapear {
+
+            @media (min-width: 577px) and (max-width: 767px) {
+                display: none;
+            }
+        }
+    }
+    
+    .navbar-brand {
+        transition: all 400ms;
+        
+        &:hover {
+            transition: all 400ms;
+            transform: scale(1.05);
+        } 
+    
+        a {
+            font-family: $default-font;
+        }   
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+      }
+}

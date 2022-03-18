@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <link rel="shortcut icon" href="icons/tittle_icon.ico">
+    <title>Manga-S-Life | Login</title>
+
+    <meta name="description" content="La mejor tienda virtual de coleccionables de Argentina. Pedilo y te lo enviamos, o visitanos en nuestra web. Las mejores imagenes y videos de superheroes y animé" />
+
+    <meta property="og:site_name" content="Geek World" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Geek World" />
+    <meta property="og:description" content="La mejor tienda virtual de coleccionables de Argentina. Pedilo y te lo enviamos, o visitanos en nuestra web. Las mejores imagenes y videos de superheroes y animé" />
+    <meta property="og:url" content="https://www.geekworld.com" />
+
+    <!--bootstrapp-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- animates -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--css-->
+    <link rel="stylesheet" href="./styles.css">
+
+    <!--javaScript-->
+    <script defer src="clients.js"></script>
+
+</head>
+<body>
+    <div class="login-box">
+        <!--tittle-->
+        <h2><a onclick = "addUser()" style ="font-size: 26px; cursor: pointer;">Manga-S-Life Login</a></h2>
+        <!--COMIENZO DEL FORM-->
+        <form id="logForm">
+        <!--username-->
+        <div class="user-box">
+            <input type="text" id="userName" required>
+            <label for="userName">User Name</label>
+        </div>
+        <!--username-->
+        <div class="user-box">
+            <input type="text" id="userEmail" required>
+            <label for="userEmail">User Email</label>
+        </div>
+        <!--password-->
+        <div class="user-box">
+            <input type="password" id="password" required>
+            <label for="password">Password</label>
+        </div>
+        <!--submit-->
+        <a class="btnSub"  href="index.html">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+        </a>
+        </form>
+        <!--fin del form-->
+    </div>
+
+    <!--bootstrapp-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
+    <!--aos-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({duration:1000});
+    </script>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/aab291df05.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

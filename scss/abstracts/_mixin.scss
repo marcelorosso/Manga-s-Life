@@ -1,0 +1,60 @@
+// -------------------- MIXINS
+
+
+//--mixin main box--//
+
+@mixin flexBox ($direction, $wrap, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+//--mixin img--//
+
+@mixin imgInside-box ($width, $height) {
+    display: block;
+    position: center;
+    border-radius: 0.8rem;
+    width: $width;
+    height: $height;
+}
+
+//--mixin text--//
+
+@mixin text($color, $size, $weight, $align, $transform, $stretch) {
+    color: $color;
+    font: {
+        family: $default-font;
+        size: $size;
+        weight: $weight;
+        stretch: $stretch;
+    }
+    text: {
+        align: $align;
+        transform: $transform;
+        decoration: none;
+    }
+    line-height: 1.5;
+}
+
+//--subtitulo--//
+
+@mixin subtitle($color, $align) {
+    color: $color;
+    font: { size: 1.4rem; weight: $extra-bold; }
+    text: { align: $align; transform: uppercase; decoration: none; }
+    letter-spacing: .1rem;
+}
+
+//--parrafo--//
+
+@mixin paragraph($color, $align, $width) {
+    color: $color;
+    font: { size: 1.2rem; weight: $regular; }
+    text: { align: $align; decoration: none; }
+    letter-spacing: .1rem;
+    line-height: 1.5;
+    max-width: $width;
+}

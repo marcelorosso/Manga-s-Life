@@ -1,0 +1,46 @@
+.div {
+    @include flexBox (column, wrap, center, center); 
+    height: 200px;
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    background-color: black;
+    box-shadow: 5px 5px 5px 5px green;
+    border-radius: 0.8rem;
+    color: white;
+}
+
+section {
+  height: 400px;
+  background-color: white;
+  color:green;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+ul {
+  @include flexBox (flex, wrap, space-around, center);
+  list-style: none;
+  height: 100px;
+  font-size: 20px;
+}
+
+#mangasWorld {
+  list-style: none;
+  height: 100px;
+  font-size: 20px;
+
+  h3 {
+    font-size: 21px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+footer {
+  @include flexBox (flex, wrap, center, center);
+  font-size: 25px;
+}
+

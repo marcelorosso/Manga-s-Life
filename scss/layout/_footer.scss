@@ -1,0 +1,43 @@
+//--copyright--//
+
+.copyright {
+    border-top: 0.1rem solid $gray-400;
+    padding-top: 3rem;
+    text-align: center;
+
+    p {
+        font-size: $small-text;
+        color: $gray-600;
+    }
+    
+    span {
+        font-size: $small-text;
+        color: $gray-600;
+
+        .heart {
+            display: inline-flex;
+            animation-name: beat;
+            animation-duration: 1.2s;
+            animation-iteration-count: infinite;
+
+            @keyframes beat {
+                0% { transform: scale(0.9); 
+                }
+                5% { transform: scale(1); 
+                }
+                10% { transform: scale(0.9); 
+                }
+                15% { transform: scale(1.1); 
+                }
+                50% { transform: scale(0.9); 
+                }
+                100% { transform: scale(0.9); 
+                }
+            }
+        }
+    }
+
+    .footer-social { 
+        text-align: center; 
+    }
+}

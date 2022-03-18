@@ -1,0 +1,131 @@
+// -------------------- GENERAL PROPERTIES
+
+// reset
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+    margin: 0;
+}
+
+.row > * {
+    padding: 0 1rem;
+    margin: 1rem 0;
+}
+
+// body general design
+
+body {
+    background-color: $gray-400;
+    font-family: $default-font;
+}
+
+footer {
+    background-color: $gray-400;
+}
+
+main {
+    background-color: white;
+}
+
+main {
+    @media (max-width: $md) {
+        h2 {
+            font-family: $custom-font;
+        }
+    }
+}
+
+// text design
+
+h1 {
+    font-size: $h1-font-size;
+    font-weight: $font-weight-bolder;
+    text-align: center;
+} 
+
+h2 {
+    font-size: $h2-font-size;
+    font-weight: $font-weight-bold;
+    text-align: center;
+} 
+
+h3 {
+    font-size: $h3-font-size;
+    font-weight: $font-weight-bold;
+    text-align: center;
+}
+
+h4 {
+    font-size: $h4-font-size;
+    font-weight: $font-weight-normal;
+    text-align: center;
+}
+
+h5 {
+    font-size: $h5-font-size;
+    font-weight: $font-weight-light;
+    text-align: center;
+}
+
+span {
+    font-size: $small-text;
+    font-family: $profesional-font;
+    color: $gray-700;
+    text-align: center;
+}
+
+p {
+    font-size: $small-text;
+    font-family: $profesional-font;
+    color: $gray-700;
+    text-align: center;
+}
+
+a {
+    color: $gray-600;
+    font-family: $default-font;
+}
+
+
+
+//--EXTENDS
+
+.img {
+    max-width: 100%;
+    height: auto;
+}
+
+// gallery images effects
+
+.imgBootstrap {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 2rem !important;
+    box-shadow: -3px 5px 15px #000 !important;
+    cursor: pointer !important;
+}
+
+.icon {
+    color: $gray-700;
+    font-size: 6.5rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+
+// hover scale
+
+.navbar-brand {
+    transition: all 400ms;
+    
+    &:hover {
+        transition: all 400ms;
+        transform: scale(1.15);            
+    } 
+}

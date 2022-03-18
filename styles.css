@@ -1,0 +1,662 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.row {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+  margin: 0;
+}
+
+.row > * {
+  padding: 0 1rem;
+  margin: 1rem 0;
+}
+
+body {
+  background-color: #ced4da;
+  font-family: "Fuzzy Bubbles", cursive;
+}
+
+footer {
+  background-color: #ced4da;
+}
+
+main {
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  main h2 {
+    font-family: "Gluten", cursive;
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 200;
+  text-align: center;
+}
+
+span {
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #495057;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #495057;
+  text-align: center;
+}
+
+a {
+  color: #6c757d;
+  font-family: "Fuzzy Bubbles", cursive;
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
+.imgBootstrap {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 2rem !important;
+  -webkit-box-shadow: -3px 5px 15px #000 !important;
+          box-shadow: -3px 5px 15px #000 !important;
+  cursor: pointer !important;
+}
+
+.icon {
+  color: #495057;
+  font-size: 6.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
+.navbar-brand {
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.navbar-brand:hover {
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  width: 300px;
+  margin-top: 10px;
+  margin-bottom: 12px;
+  background-color: black;
+  -webkit-box-shadow: 5px 5px 5px 5px green;
+          box-shadow: 5px 5px 5px 5px green;
+  border-radius: 0.8rem;
+  color: white;
+}
+
+section {
+  height: 400px;
+  background-color: white;
+  color: green;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: flex;
+          flex-direction: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  height: 100px;
+  font-size: 20px;
+}
+
+#mangasWorld {
+  list-style: none;
+  height: 100px;
+  font-size: 20px;
+}
+
+#mangasWorld h3 {
+  font-size: 21px;
+}
+
+#mangasWorld p {
+  font-size: 15px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: flex;
+          flex-direction: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 473px;
+  padding: 40px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#141e30), to(#243b55));
+  background: linear-gradient(#141e30, #243b55);
+}
+
+@media (max-width: 767px) {
+  .login-box {
+    width: 90%;
+    height: 400px;
+  }
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login-box a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  -webkit-transition: .5s;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+}
+
+.login-box a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+          box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
+.login-box span {
+  position: absolute;
+  display: block;
+}
+
+.login-box span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(#03e9f4));
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  -webkit-animation: btn-anim1 1s linear infinite;
+          animation: btn-anim1 1s linear infinite;
+}
+
+.login-box span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#03e9f4));
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  -webkit-animation: btn-anim2 1s linear infinite;
+          animation: btn-anim2 1s linear infinite;
+  -webkit-animation-delay: .25s;
+          animation-delay: .25s;
+}
+
+.login-box span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, right top, left top, from(transparent), to(#03e9f4));
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  -webkit-animation: btn-anim3 1s linear infinite;
+          animation: btn-anim3 1s linear infinite;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+.login-box span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#03e9f4));
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  -webkit-animation: btn-anim4 1s linear infinite;
+          animation: btn-anim4 1s linear infinite;
+  -webkit-animation-delay: .75s;
+          animation-delay: .75s;
+}
+
+.user-box {
+  position: relative;
+}
+
+.user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+@-webkit-keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+
+@-webkit-keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+
+@-webkit-keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
+
+.event {
+  font-family: monospace;
+  letter-spacing: 0.2rem;
+}
+
+.copyright {
+  border-top: 0.1rem solid #ced4da;
+  padding-top: 3rem;
+  text-align: center;
+}
+
+.copyright p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.copyright span {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.copyright span .heart {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-animation-name: beat;
+          animation-name: beat;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes beat {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  5% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  15% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+@keyframes beat {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  5% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  15% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+.copyright .footer-social {
+  text-align: center;
+}
+
+.sectionContact {
+  background-color: rgba(248, 184, 234, 0.616);
+  padding: 25px;
+}
+
+@media (max-width: 1200px) {
+  .sectionContact {
+    background-size: 1800px;
+    background-position: center;
+  }
+}
+
+.sectionContact div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sectionContact div fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: white;
+  border: double 4px;
+  padding: 20px;
+  width: auto;
+}
+
+.sectionContact div fieldset form .columnDate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10px;
+}
+
+.sectionContact div fieldset form .check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px 0px;
+}
+
+@media (max-width: 375px) {
+  .sectionContact div fieldset form .check {
+    display: none;
+  }
+}
+
+.sectionContact div fieldset form .listContact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.sectionContact div fieldset form .comentariosContact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sectionContact div fieldset form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.sectionContact div fieldset form div .sendContact {
+  border: 3px solid white;
+  font-size: 15px;
+  padding: 5px;
+  font-family: monospace;
+}
+
+.sectionContact div fieldset form div .sendContact:active {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.sectionContact div fieldset form div .sendContact:hover {
+  background-color: white;
+  font-family: 'Grechen Fuemen', cursive;
+  padding: 5px;
+  border-radius: 5px;
+  border: double;
+  font-weight: bold;
+  font-size: 20px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.sectionContact div fieldset form div .GetOutcontact {
+  border: 3px solid white;
+  font-size: 15px;
+  padding: 5px;
+  font-family: monospace;
+}
+
+.sectionContact div fieldset form div .GetOutcontact:active {
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+}
+
+.sectionContact div fieldset form div .GetOutcontact:hover {
+  background-color: white;
+  font-family: 'Grechen Fuemen', cursive;
+  padding: 5px;
+  border-radius: 5px;
+  border: double;
+  font-weight: bold;
+  font-size: 20px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+/*# sourceMappingURL=styles.css.map */
