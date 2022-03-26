@@ -1,0 +1,42 @@
+.section-header {
+    padding-top: 20px;
+    font-family: $profesional-font;
+}
+
+.zoom {
+    img {
+
+        width: 100%;
+        max-height: 261px;
+        margin: 15px 0;
+        vertical-align: middle;
+        max-width: 339px;
+        height: auto;
+        transition: all 400ms;
+
+        &:hover {
+            transform: scale(1.05);
+            transition: all 400ms;
+        }
+    }
+}
+
+.price,
+.cart-item-title {
+    padding-top: 50px;
+}
+
+.cart-total {
+    margin-top: 20px;
+    font-family: $profesional-font;
+    border: double black;
+}
+
+.btn-purchase,
+.shop-item-button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    color:black;
+    border: 2px solid green;
+}

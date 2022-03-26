@@ -21,6 +21,42 @@
     height: $height;
 }
 
+//--mixin overlay--//
+
+@mixin imageOverlay ($background, $backdrop-filter, $border-radius) {
+    @include flexBox(flex, column, center, center);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $background;
+    backdrop-filter: $backdrop-filter;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: $custom-font;
+    font-weight: $font-weight-bold;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 1s;
+    border-radius: $border-radius;
+
+    & > * {
+        transform: translateY(20px);
+        transition: transform 1s;
+    }
+
+    &:hover > * {
+        transform: translateY(0px);                    
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
 //--mixin text--//
 
 @mixin text($color, $size, $weight, $align, $transform, $stretch) {
