@@ -207,6 +207,79 @@ footer {
   font-size: 25px;
 }
 
+.title,
+.paragraph {
+  color: green !important;
+}
+
+.mi_footer {
+  font-family: Arial, Helvetica, sans-serif;
+  color: green;
+}
+
+.modal-body {
+  width: 80%;
+  margin-left: 10%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal-body .buttons_modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-body .buttons_modal .btn_facebook,
+.modal-body .buttons_modal .btn_google,
+.modal-body .buttons_modal .btn_email {
+  margin-bottom: 1rem;
+  padding: 1em;
+  border-radius: 30px;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal-body .buttons_modal .btn_facebook a,
+.modal-body .buttons_modal .btn_google a,
+.modal-body .buttons_modal .btn_email a {
+  text-decoration: none;
+  border: none;
+  font-weight: bold;
+  color: green;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal-body .buttons_modal .btn_facebook {
+  background-color: #006ab1;
+}
+
+.modal-body .buttons_modal .btn_google {
+  color: #000;
+  background-color: #E7E7E7;
+}
+
+.modal-body .buttons_modal .btn_email {
+  border: 1px solid #06A106;
+  color: #06A106;
+  background-color: #ffffff;
+}
+
+.modal-body a, .modal-body p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.family {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .login-box {
   position: absolute;
   top: 50%;
@@ -428,6 +501,10 @@ footer {
 .event {
   font-family: monospace;
   letter-spacing: 0.2rem;
+}
+
+td {
+  font-size: 1rem;
 }
 
 .copyright {
@@ -662,6 +739,11 @@ footer {
   transition: all 1s;
 }
 
+.shop-item {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
 .section-header {
   padding-top: 20px;
   font-family: Arial, Helvetica, sans-serif;
@@ -676,6 +758,7 @@ footer {
   height: auto;
   -webkit-transition: all 400ms;
   transition: all 400ms;
+  border-radius: 10px;
 }
 
 .zoom img:hover {

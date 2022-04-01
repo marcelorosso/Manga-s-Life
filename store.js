@@ -28,29 +28,32 @@ Conclusión:
 que puedan cargarse estando posicionados en el comienzo de la page.!*/
 
 
-// Condicional para el loading en DOM
+// Operador Condicional para el loading en DOM
 
-if (document.readyState == "loading") {
-    document.addEventListener("DOMContentLoaded", ready);
-}else {
-    ready()
-}
+const readStore = (document.readyState == "loading")
+readStore? document.addEventListener("DOMContentLoaded", ready) : ready()
+
+// if (document.readyState == "loading") {
+//     document.addEventListener("DOMContentLoaded", ready);
+// }else {
+//     ready()
+// }
 
 //RENDERIZAR PRODUCTS LIST (TIENDA - STORE.HTML)
 
-console.log(product)
+console.log(productManga)
 function showProductList () {
     let mangas = document.getElementById("shopList")
     
-    for (let i = 0; i < product.length; i++) {
+    for (let i = 0; i < productManga.length; i++) {
         let productAvaible = `
         <div class="shop-item d-flex flex-column">
             <div class="zoom d-flex justify-content-center">
-                <img class="shop-item-image img" src="assets/${product[i].img}">
+                <img class="shop-item-image img" src="assets/${productManga[i].img}">
             </div>
             <div class="shop-items-details d-flex flex-column">
-                <span class="shop-item-title">${product[i].name}</span>
-                <span class="shop-item-price">$${product[i].valueList}</span>
+                <span class="shop-item-title">${productManga[i].name}</span>
+                <span class="shop-item-price">$${productManga[i].valueList}</span>
                 <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
             </div>
         </div>`
@@ -88,10 +91,24 @@ function ready() {
     document.getElementsByClassName("btn-purchase")[0].addEventListener("click", purchaseClicked);
 }
 
-//Evento clck del boton Purchase
+//Evento click del boton Purchase (with Sweet Alert)
 
 function purchaseClicked(event) {
-    alert("Thank you for your purchase");
+    Swal.fire({
+        // html:  `<div data-aos="zoom-in" class= container d-flex flex-column>
+        //             <img class= "img"  src= assets/logos/manga_s_life_waifu2x.png>
+        //             <h2 style="font-size: 25px;">Thanks for your purchase</h2>
+        //         </div>`,
+        imageUrl: 'assets/logos/manga_s_life_waifu2x.png',
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
+        titleText: "Thank for your purchase",
+        timer: 3000,
+        color: "green",
+        heightAuto: true,
+        timerProgressBar: true
+    })
     let cartItems = document.getElementsByClassName("cart-items")[0];
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild);

@@ -1,3 +1,7 @@
+.shop-item {
+    box-sizing: inherit;
+}
+
 .section-header {
     padding-top: 20px;
     font-family: $profesional-font;
@@ -13,6 +17,7 @@
         max-width: 339px;
         height: auto;
         transition: all 400ms;
+        border-radius: 10px;
 
         &:hover {
             transform: scale(1.05);

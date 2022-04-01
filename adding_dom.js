@@ -124,6 +124,8 @@ una función de eliminación por ID, y una función para visualizar el stock en 
 arrow function y ciclos for off. Por último, se creo una function for of que lista todos los productos
 de los arrays con salidas mendiante table y alert.*/
 
+// ! Profe no redeclaré product, lo que hice es generar una constante product vacía en donde incorpore varios objetos ya creados con la clase Products para trabajar con ella.
+
 const product = [];
 product.push (product1, product2, product3, product4);
 
@@ -214,6 +216,8 @@ function listOfProduct () {
 
 // STOCK MANAGMENT (Less than 5 products and without stock)
 
+// ! Funciona, solo que no la llamé xq aún no la veo útil en mi página (expuesta para desafío).
+
 function lowAndWithOutProduct () {
     if (lowStock = product.filter(product => product.stock <= 5 & product.stock > 0)) {
         console.log ("");
@@ -240,12 +244,57 @@ function lowAndWithOutProduct () {
 }
 
 
+//HOME POP-UP (LOGIN AND DISCOUNT) - Pressing User and Discount icon
 
+const loginBut = document.getElementById("loginBtn");
+const discountBut = document.getElementById("discountBtn");
 
-    
+// Discount
 
+discountBut.addEventListener("click", (event) => {
+    Swal.fire ({
+        title: "50% off in your next purchase",
+        html: `<span class="paragraph">if you are registered</span>`,
+        background: "white",
+        input: "text",
+        inputPlaceholder: "Enter your email address",
+        confirmButtonText: "GET YOUR 50% OFF",
+        showCancelButton: true,
+        cancelButtonText: "No, thanks",
+        cancelButtonColor: "green",
+        showCloseButton: true,
+        footer: `<span>Thanks for follow us. <a class= "mi_footer" href="index.html">Suscribe here</a></span>`,
+        customClass: {
+            title: "title",
+            input: "input",
+            confirmButton: "boton_confirmacion",
+        }
+    })
+} )  
 
+// Sign Up and Sign In
 
+loginBut.addEventListener("click", (event) => {
+    Swal.fire ({
+        title: "Sign In Here",
+        color: "green",
+        showCloseButton: true,
+        showConfirmButton: false,
+        customClass: {
+            title: "family"
+        },
+        html: `<div class="modal-body">
+        <div class="buttons_modal">
+          <button class="btn_facebook">Login with Facebook</button>
+          <button class="btn_google" href="https://mail.google.com/">Login with Google</button>
+          <button class="btn_email" id="btn_email"><a href="login.html">Login with your Manga-s-Life Account<a></button>
+        </div>
+        <div class="link_form_registro">
+          <p>Don't have your account yet?<a href="">Sign Up here</a></p>
+        </div>
+        </div>`
+    }) 
+}) 
 
 
 

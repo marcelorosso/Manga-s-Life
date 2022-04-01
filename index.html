@@ -32,7 +32,6 @@
 
     <!--javaScript-->
     <script defer src="adding_dom.js"></script>
-    
 
 </head>
 <body>
@@ -43,42 +42,45 @@
                 <div class="col-xl-12 col-sm-12 col-md-12 col-lg-12">
                     <nav class="navbar navbar-expand-sm navbar navbar-expand-md navbar navbar-expand-lg navbar navbar-expand-xl navbar navbar-expand-xxl navbar-light" style="background-color: white; border-radius: 0.8rem;">
                         <div class="container-fluid">
+                            <!--HEADER PART I-->
                             <!--LOGO-->
                             <div>
                                 <a href= "index.html" target="_self"><img src="assets/logos/manga_s_life_waifu2x.png" class="img" alt="Logo"></a>
                             </div>
-                            <!--facebook-->
-                            <a href="https://www.facebook.com/" target="_blank" class="navbar-brand icon" style=" font-size: 1rem;"><i class="fab fa-facebook-square" style="color: green; font-size: 30px;"></i></a>
-                            <!--instagram-->
-                            <a href="https://www.instagram.com/?hl=es" target="_blank" class="navbar-brand icon" style=" font-size: 1rem;"><i class="fab fa-instagram-square" style="color: green; font-size: 30px;"></i></a>
-                            <!--return home and month anime link-->
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                    <!--month anime link-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="https://ar.pinterest.com/search/pins/?q=best%20manga%20fights%20scenes&rs=typed&term_meta[]=best%7Ctyped&term_meta[]=manga%7Ctyped&term_meta[]=fights%7Ctyped&term_meta[]=scenes%7Ctyped" target="_blank" style="font-size:medium;">Best Manga Fights</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!--LOGIN BUTTON-->
-                            <div class="col-sm-4 col-lg-3 col-md-4">
-                                <form class="d-flex justify-content-end button navbar-brand">
-                                    <button class="btn btn-outline-success" type="submit" style="background-color: black; width: 100%;"><a target="_self" style= "text-decoration: none; color: white;" href="login.html">User Login</a></button>
+                            <!--Social Media
+                            <div class="d-flex justify-content-around">-->
+                                <!--facebook
+                                <a href="https://www.facebook.com/" target="_blank" class="navbar-brand icon" style=" font-size: 1rem;"><i class="fab fa-facebook-square" style="color: green; font-size: 30px;"></i></a>-->
+                                <!--instagram
+                                <a href="https://www.instagram.com/?hl=es" target="_blank" class="navbar-brand icon" style=" font-size: 1rem;"><i class="fab fa-instagram-square" style="color: green; font-size: 30px;"></i></a>
+                            </div>-->
+                            <!--HEADER PART II-->
+                            <div class="d-flex justify-content-center">
+                                <!--search icon-->
+                                <form class="form-inline" action="/action_page.php">
+                                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                                    <button class="btn btn-success" type="submit">Search</button>
                                 </form>
                             </div>
-                            <!--CART-->
-                            <div class="d-flex justify-content-end col-sm-2 col-lg-2 col-md-2 col-xl-1 navbar-brand">
-                                <buttom style="cursor:pointer"><a target="_self" href="store.html"><i class="fab fa-shopify" style="color: green; font-size: 30px;"></i></a></buttom>
+                            <div class="d-flex justify-content-around">
+                                <!--LOGIN BUTTON-->
+                                <div class="d-flex justify-content-end col-sm-2 col-lg-2 col-md-2 col-xl-1 navbar-brand">
+                                    <buttom style="cursor:pointer"><i class="far fa-user" style="color: green; font-size: 30px;" id="loginBtn"></i></buttom>
+                                </div>
+                                <!--STORE-->
+                                <div class="d-flex justify-content-end col-sm-2 col-lg-2 col-md-2 col-xl-1 navbar-brand">
+                                    <buttom style="cursor:pointer"><a target="_self" href="store.html"><i class="fab fa-shopify" style="color: green; font-size: 30px;"></i></a></buttom>
+                                </div>
+                                <!--BY CREDIT-->
+                                <div class="d-flex justify-content-end col-sm-2 col-lg-2 col-md-2 col-xl-1 navbar-brand">
+                                    <buttom style="cursor:pointer"><i class="fas fa-hand-holding-usd" style="color: green; font-size: 30px;" id="discountBtn"></i></buttom>
+                                </div>
+                                <!--CART ICON-->
+                                <div class="d-flex justify-content-end col-sm-2 col-lg-2 col-md-2 col-xl-1 navbar-brand">
+                                    <buttom onclick ="loadAll()" id="cartBtn"><i class="fab fa-opencart" style="color: green; font-size: 30px; cursor:pointer"></i></buttom>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-end col-sm-2 col-lg-2 col-md-2 col-xl-1 navbar-brand">
-                                <buttom onclick ="newBuy()" style="cursor:pointer"><i class="fas fa-hand-holding-usd" style="color: green; font-size: 30px;"></i></buttom>
-                            </div>
-                            <div class="d-flex justify-content-end col-sm-2 col-lg-2 col-md-2 col-xl-1 navbar-brand">
-                                <buttom onclick ="loadAll()" id="cartBtn"><i class="fab fa-opencart" style="color: green; font-size: 30px; cursor:pointer"></i></buttom>
-                            </div>
-                        </div>
-                        
-                        
+                        </div>                     
                     </nav>
                 </div>
             </div> 
@@ -198,6 +200,10 @@
 
     <!--font awesome-->
     <script src="https://kit.fontawesome.com/aab291df05.js" crossorigin="anonymous"></script>
+
+    <!--sweet alerts2-->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 </body>

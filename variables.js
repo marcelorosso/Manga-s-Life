@@ -1,4 +1,4 @@
-const product = [
+const productManga = [
     {id: 1, type: "manga", name: "You are in the Blue Summer vol. 01", img:"you_re_in_the_blue_summer.jpg", valueList: 1500, stock: 12, productAvaible: true},
     {id: 2, type: "manga", name: "Attack On Titan vol. 01", img:"attack01.jpg", valueList: 600, stock: 100, productAvaible: true},
     {id: 3, type: "manga", name: "Hunter x Hunter vol. 01", img:"hunter_x_hunter01.jpg", valueList: 450, stock: 150, productAvaible: true},
@@ -16,7 +16,7 @@ const product = [
 ];
 
 function saveAndRecoverStorage() {
-    localStorage.setItem("mangas", JSON.stringify(product)); 
+    localStorage.setItem("mangas", JSON.stringify(productManga)); 
     let recover = JSON.parse(localStorage.getItem("mangas")) || [];
 }
 

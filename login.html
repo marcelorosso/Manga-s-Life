@@ -43,39 +43,71 @@
     <script defer src="clients.js"></script>
 
 </head>
-<body>
-    <div class="login-box">
-        <!--tittle-->
-        <h2><a onclick = "addUser()" style ="font-size: 26px; cursor: pointer;">Manga-S-Life Login</a></h2>
-        <!--COMIENZO DEL FORM-->
-        <form id="logForm">
-        <!--username-->
-        <div class="user-box">
-            <input type="text" id="userName" required>
-            <label for="userName">User Name</label>
-        </div>
-        <!--username-->
-        <div class="user-box">
-            <input type="text" id="userEmail" required>
-            <label for="userEmail">User Email</label>
-        </div>
-        <!--password-->
-        <div class="user-box">
-            <input type="password" id="password" required>
-            <label for="password">Password</label>
-        </div>
-        <!--submit-->
-        <a class="btnSub"  href="index.html">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Submit
-        </a>
-        </form>
-        <!--fin del form-->
-    </div>
+<body style="background-color: white;">
+    <header style="height:250px;">
 
+    </header>
+    <main class="d-flex flex-column justify-content-center">
+        <section>
+            <div class="login-box"> 
+                <!--tittle-->
+                <h2><a class="logoClick" style ="font-size: 26px; cursor: pointer;">Manga-S-Life Login</a></h2>
+                <!--COMIENZO DEL FORM-->
+                <form id="logForm">
+                <!--username-->
+                <div class="user-box">
+                    <input type="text" id="userName" required>
+                    <label for="userName">User Name</label>
+                </div>
+                <!--username-->
+                <div class="user-box">
+                    <input type="text" id="userEmail" required>
+                    <label for="userEmail">User Email</label>
+                </div>
+                <!--password-->
+                <div class="user-box">
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <!--submit-->
+                <div class="d-flex justify-content-around">
+                    <a class="btnSub" >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Sign Up
+                    </a>
+                    <a class="btnSub" href="index.html">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Return Home
+                    </a>
+                </div>
+                
+                </form>
+                <!--fin del form-->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h2 style="text-align: center; margin-top: 30px;">Showing my Users Data (LocalStorage)</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <th><p>Complete Name</p></th>
+                    <th><p>Email Address</p></th>
+                    <th><p>Password</p></th>
+                </thead>
+                <tbody id="outPut" style="text-align: center;">
+                <!-- Display users Data-->
+                </tbody>
+            </table>
+        </div>
+    </footer>
+    
     <!--bootstrapp-->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -89,6 +121,10 @@
 
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/aab291df05.js" crossorigin="anonymous"></script>
+
+    <!--sweet alerts2-->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 </html>
