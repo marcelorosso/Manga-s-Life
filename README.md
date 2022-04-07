@@ -12,7 +12,7 @@
 
 * **Desarrollado por la estudiante:** Marcelo Gabriel Rosso
 
-* **Proyecto final:** https://mariaflorenciarecio.github.io/bao-bao-issey-miyake/
+* **Proyecto final:** https://marcelorosso.github.io/Manga-s-Life/
 
 ## Fundamentación
 
@@ -46,5 +46,5 @@ El trabajo busca transmitir la **innovación, versatilidad y practicidad**, tant
 
 ## Contacto
 
-* **LinkedIn:** https://www.linkedin.com/in/marcelogabrielrosso
-* **GitHub:** https://github.com/marcelogabrielrosso
+* **LinkedIn:** https://www.linkedin.com/in/marcelo-gabriel-rosso-6797369a/
+* **GitHub:** https://github.com/marcelorosso
