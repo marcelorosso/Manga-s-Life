@@ -507,6 +507,10 @@ td {
   font-size: 1rem;
 }
 
+.contact-info-item {
+  text-align: center;
+}
+
 .copyright {
   border-top: 0.1rem solid #ced4da;
   padding-top: 3rem;

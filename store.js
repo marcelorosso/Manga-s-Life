@@ -27,48 +27,21 @@ Conclusión:
 !El carrito se encuentra en total funcionamiento, si no se cargan los productos al mismo, hacer reload de la page hasta
 que puedan cargarse estando posicionados en el comienzo de la page.!*/
 
-
 // Operador Condicional para el loading en DOM
 
-const readStore = (document.readyState == "loading")
-readStore? document.addEventListener("DOMContentLoaded", ready) : ready()
+// const readStore = (document.readyState == "loading")
+// readStore? document.addEventListener("DOMContentLoaded", ready) : ready()
 
-// if (document.readyState == "loading") {
-//     document.addEventListener("DOMContentLoaded", ready);
-// }else {
+// window.onload=function() {
 //     ready()
 // }
-
-//RENDERIZAR PRODUCTS LIST (TIENDA - STORE.HTML)
-
-console.log(productManga)
-function showProductList () {
-    let mangas = document.getElementById("shopList")
-    
-    for (let i = 0; i < productManga.length; i++) {
-        let productAvaible = `
-        <div class="shop-item d-flex flex-column">
-            <div class="zoom d-flex justify-content-center">
-                <img class="shop-item-image img" src="assets/${productManga[i].img}">
-            </div>
-            <div class="shop-items-details d-flex flex-column">
-                <span class="shop-item-title">${productManga[i].name}</span>
-                <span class="shop-item-price">$${productManga[i].valueList}</span>
-                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-            </div>
-        </div>`
-        mangas.innerHTML += productAvaible
-        
-    }
-}
-
-showProductList()
 
 //RENDERIZAR + DESARROLLO DE PRODUCTS CART
 
 //Función ejecutora del Cart
 
 function ready() {
+
     let removeCartItemButtons = document.getElementsByClassName("btn-danger");
     console.log(removeCartItemButtons)
     for (let i = 0; i < removeCartItemButtons.length; i++) {
@@ -91,14 +64,81 @@ function ready() {
     document.getElementsByClassName("btn-purchase")[0].addEventListener("click", purchaseClicked);
 }
 
+// if (document.readyState == "loading") {
+//     document.addEventListener("DOMContentLoaded", ready);
+// }else {
+//     ready()
+// }
+
+//RENDERIZAR PRODUCTS LIST (TIENDA - STORE.HTML) - REALIZADO POR SISTEMA DE PROMESAS / FETCH
+
+// Variables sueltas
+
+const mangasJson ="mangas.json"
+let contentToshow = "";
+let mangas = document.getElementById("shopList")
+
+// Función que muestra los productos en inventario. La misma se introduce a la función fetch (const getMangas) con promesa y mostrar los productos en HTML
+
+const showProductList = (productDetails) => {
+    const {name, img, valueList} = productDetails
+        let productAvaibles = ""
+        productAvaibles += `
+        <div class="shop-item d-flex flex-column">
+            <div class="zoom d-flex justify-content-center">
+                <img class="shop-item-image img" src="assets/${img}">
+            </div>
+            <div class="shop-items-details d-flex flex-column">
+                <span class="shop-item-title">${name}</span>
+                <span class="shop-item-price">$${valueList}</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>`
+        return productAvaibles
+}
+
+// Función que toma el JSON por medio de FETCH, muestra toda la información en HTML tomando la función SHOWPRODUCTLIST (enseña todos los productos) y, finalmente, hace funcionar la carga al carrito de los productos que se seleccionen tomando la función READY.
+
+// Detalle del FETCH con sus PROMISES:
+
+/* - Fetch que toma los productos de un array en formato JSON (archivo mangas.json)
+   - Primera promesa: toma el array y lo introduce al circuito
+   - Segunda promesa: toma el array y lo mete a una constante para unificar, luego muestra los productos por tabla y los guarda en local storages para finalmente mostrarlos en el html por medio de la función showProductList
+   - Finalmente (finally): la función le dice al sistema que la carga de productos esta lista para que por medio de la función ready se le agreguen los eventos a los productos y permita de esta forma el funcionamiento del carrito */
+
+//! Gracias a lo aprendido en última clase con el sistema de promesas a través de fetch (similar a asyinc - await) he podido hacer funcionar a la perfección la carga de productos al carrito, haciendo esperar la función ready hasta la carga completa del documento
+
+const getMangas = (mangasJson) => {
+    fetch(mangasJson)
+    .then((response)=> response.json())
+    .then(json => {
+        const showProducts = json
+        console.table(showProducts) // mostrar la lista de productos en tabla en consola
+        localStorage.setItem("mangas", JSON.stringify(showProducts)) // guardar listado de productos en Local Storage
+        showProducts.forEach(product => {
+            contentToshow += showProductList(product)
+            mangas.innerHTML = contentToshow
+        });
+    })
+    .finally(() => {
+        return ready();
+    })
+}
+
+getMangas(mangasJson) // EJECUCIÓN EN HTML
+
+// Función de recupero de info de Local Storage
+
+// function RecoverStorage() {
+//     let recover = JSON.parse(localStorage.getItem("mangas")) || [];
+// }
+
+// RecoverStorage()
+
 //Evento click del boton Purchase (with Sweet Alert)
 
 function purchaseClicked(event) {
     Swal.fire({
-        // html:  `<div data-aos="zoom-in" class= container d-flex flex-column>
-        //             <img class= "img"  src= assets/logos/manga_s_life_waifu2x.png>
-        //             <h2 style="font-size: 25px;">Thanks for your purchase</h2>
-        //         </div>`,
         imageUrl: 'assets/logos/manga_s_life_waifu2x.png',
         imageWidth: 400,
         imageHeight: 200,

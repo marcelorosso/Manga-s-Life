@@ -31,9 +31,8 @@
     <link rel="stylesheet" href="./styles.css">
 
     <!--javaScript-->
-    <script src="variables.js" async></script>
-    <script src="store.js" async></script>
-    
+    <script src="./variables.js" async></script> 
+    <script src="./store.js" async></script> 
 
 </head>
 <body>
@@ -81,13 +80,15 @@
         </div>
     </header>
     <main>
-        <section class="container-fluid" style="max-height: 2500px; height: 100%;">
+        <section class="container-fluid" style="max-height: 4000px; height: 100%;">
             <!--PRODUCT LIST-->
             <h2 class="section-header">MANGAS LIST</h2>
             <!-- Product List by using DOM and JSON Array-->
             <hr>
             <div id="shopList" class="d-flex justify-content-around row row-cols-4">
-
+                <div class="shop-item d-flex flex-column">
+ 
+                </div>
             </div>
             <hr>
         </section>
@@ -111,6 +112,51 @@
                 <button class="btn btn-primary btn-purchase" typw="button">PURCHASE</button>
             </div>
         </section>
+        <!--COMIENZO SECTION CONTACTO-->
+        <hr>
+        <section class="container" data-aos="fade-up">
+            <!--titular principal-->
+            <div>
+                <h2 style="margin-top: 25px;">Contacto</h2>
+                <p style="font-size: 20px;">Contactanos por cualquiera de los siguientes medios.</p>
+            </div>
+            <!--comienzo informacion de contacto-->
+            <div class="row row-cols-2 row-cols-md-4 contact-container">
+                <!--telefono-->
+                <div class="col">
+                    <div class="contact-info-item h-100">
+                        <i class="fas fa-mobile-alt icon"></i>
+                        <h3>Teléfono</h3>
+                        <p>+54 9 3517911990</p>
+                    </div>
+                </div>
+                <!--direccion-->
+                <div class="col">
+                    <div class="contact-info-item h-100">
+                        <i class="far fa-map icon"></i>
+                        <h3>Dirección</h3>
+                        <p>Pública 1 Norte 6920, Córdoba, Argentina</p>
+                    </div>
+                </div>
+                <!--horarios-->
+                <div class="col">
+                    <div class="contact-info-item h-100">
+                        <i class="far fa-calendar-alt icon"></i>
+                        <h3>Horarios</h3>
+                        <p>L M X J V 9:00-18:00</p>
+                    </div>
+                </div>
+                <!--e-mail-->
+                <div class="col">
+                    <div class="contact-info-item h-100">
+                        <i class="far fa-envelope icon"></i>
+                        <h3>Email</h3>
+                        <p>geek-w@gmail.com</p>
+                    </div>
+                </div>
+            </div>   
+        </section>
+        <!--fin informacion de contacto--> 
     </main>
     <!-- APERTURA FOOTER -->
     <footer>
