@@ -22,7 +22,7 @@
 // body general design
 
 body {
-    background-color: $gray-400;
+    background-color: white;
     font-family: $default-font;
 }
 
@@ -43,6 +43,10 @@ main {
 }
 
 // text design
+
+hr {
+    background-color: lightgreen;
+}
 
 h1 {
     font-size: $h1-font-size;

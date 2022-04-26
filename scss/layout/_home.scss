@@ -1,118 +1,289 @@
-.div {
-    @include flexBox (column, wrap, center, center); 
-    height: 200px;
-    width: 300px;
-    margin-top: 10px;
-    margin-bottom: 12px;
-    background-color: black;
-    box-shadow: 5px 5px 5px 5px green;
-    border-radius: 0.8rem;
-    color: white;
-}
+.sec {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  @include flexBox (flex, nowrap, space-between, center);
+  background: green;
+  transition: 0.5s;
 
-section {
-  height: 400px;
-  background-color: white;
-  color:green;
-  font-weight: bolder;
-  font-size: larger;
-}
-
-ul {
-  @include flexBox (flex, wrap, space-around, center);
-  list-style: none;
-  height: 100px;
-  font-size: 20px;
-}
-
-#mangasWorld {
-  list-style: none;
-  height: 100px;
-  font-size: 20px;
-
-  h3 {
-    font-size: 21px;
+  @media (max-width: $lg) {
+    padding: 20px;
+    padding-bottom: 160px;
+    height: 80%;
   }
 
-  p {
-    font-size: 15px;
-  }
-}
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    @include flexBox (flex, nowrap, space-between,center);
+    
+    @media (max-width: $lg) {
+      padding: 20px 20px;
 
-footer {
-  @include flexBox (flex, wrap, center, center);
-  font-size: 25px;
-}
+      .toggleMenu {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(assets/logos/menu.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        z-index: 2;
+        cursor: pointer;
+      }
 
-// Discount and Sign In ways with Sweet Alert / CSS
-
-// Discount
-
-.title,
-.paragraph {
-  color: green !important;
-  // font-family: monospace;
-}
-
-.mi_footer {
-  font-family: $profesional-font;
-  color: green;
-}
-
-// Sign In or Up
-
-.modal-body{
-  width: 80%;
-  margin-left: 10%;
-  font-family: $profesional-font;
-
-  .buttons_modal{
-    display: flex;
-    flex-direction: column;
-
-    .btn_facebook,
-    .btn_google,
-    .btn_email {
-      margin-bottom: 1rem;
-      padding: 1em;
-      border-radius: 30px;
-      border: none;
-      color: #ffffff;
-      font-weight: bold;
-      font-size: 16px;
-      cursor: pointer;
-
-      a {
-        text-decoration: none;
-        border: none;
-        font-weight: bold;
-        color: green;
-        font-size: 16px;
-        font-family: $profesional-font;
+      .active {
+        background: url(assets/logos/close.png);
+        background-position: center;
+        background-size: 20px;
+        background-repeat: no-repeat;
       }
     }
 
-    .btn_facebook{
-      background-color: #006ab1;
+    a {
+      font-family: $home-font;
     }
 
-    .btn_google{
-      color: #000;
-      background-color: #E7E7E7;
+    .logo {
+      position: relative;
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+      @media (max-width: $md) {
+        max-width: 110px;
+      }
+      @media (min-width:769px) and (max-width: $lg) {
+        max-width: 140px;
+      }
     }
 
-    .btn_email{
-      border: 1px solid #06A106;
-      color: #06A106;
-      background-color: #ffffff;
+    Ul {
+      position: relative;
+      display: flex;
+      margin-bottom: 80px;
+  
+      @media (max-width: $lg) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        @include flexBox (column, nowrap, center, center);
+        z-index: 1;
+        transition: 0.2s;
+        visibility: hidden;
+        opacity: 0;
+  
+        &.active {
+          visibility: visible;
+          opacity: 1;
+          background: white;
+          filter: invert(1);
+        }
+      }
+  
+      li {
+        list-style: none;
+  
+        a {
+          font-family: $home-font;
+          display: inline-block;
+          color: white;
+          font-weight: 400;
+          margin-left: 40px;
+          text-decoration: none;
+  
+          @media (max-width: $lg) {
+            display: inline-block;
+            color: black;
+            font-weight: 400;
+            margin-left: 0;
+            text-decoration: none;
+            font-size: 2em;
+            margin: 10px 0;
+  
+            &:hover {
+              color: violet;
+            }
+          }
+        }
+      }
     }
-
   }
-  a, p {
-    font-family: $profesional-font;
+  
+  .content {
+    position: relative;
+    width: 100%;
+    @include flexBox (flex, nowrap, space-between, center);
+
+    @media (max-width: $lg) {
+      flex-direction: column;
+      margin-top: 80px;
+    }
+
+    .textBox {
+      position: relative;
+      max-width: 600px;
+      margin-top: 80px;
+      // margin-top: 100px;
+
+      @media (max-width: $lg) {
+        position: relative;
+        max-width: 100%;
+        padding-right: 20px;
+        margin-top: 70px;
+      }
+
+      h2 {
+        font-family: $home-font;
+        color: white;
+        font-size: 4em;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-align: start;
+
+        @media (max-width: $lg) {
+          font-size: 3em;
+        }
+      }
+      
+      span {
+        color: white;
+        font-family: $home-font;
+        font-size: 2em;
+        text-align: start;
+
+        @media (max-width: $lg) {
+          font-size: 1.3em;
+        }
+      }
+
+      p {
+        font-family: $home-font;
+        color: white;
+        text-align: start;
+
+        @media (max-width: $sm) {
+          font-size: 13px;
+          margin-bottom: 0px;
+        }
+      }
+
+      a{
+        display: inline-block;
+        margin-top: 20px;
+        padding: 8px 20px;
+        font-family: $home-font;
+        background: white;
+        color: black;
+        border-radius: 40px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-decoration: none;
+        text-transform: uppercase;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+        @media (max-width: $lg) {
+          padding: 8px 15px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .imgBox {
+      width: 600px;
+      @include flexBox (flex, nowrap, flex-end, none);
+      padding-right: 50px;
+
+      @media (max-width: $lg) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-right: 0;
+        margin-top: 50px;
+      }
+      
+      img {
+        max-width: 280px;
+        border-radius: 40px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        @media (max-width: $lg) {
+          max-width: 200px;
+        }
+      }
+    }
+  }
+  .thumb {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      margin: 0 20px;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &:hover {
+        transform: translateY(-15px);
+      }
+
+      img {
+        max-width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+        @media (max-width: $lg) {
+          max-width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+  .sci {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    @include flexBox (column, nowrap, center, center);
+    color: black;
+
+    @media (max-width: $lg) {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      background: rgba(0,0,0,0.2);
+      transform: translateY(-50%);
+      @include flexBox (flex, nowrap, center, center);
+    }
+
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        display: inline-block;
+        filter: invert(1);
+        margin: 5px 0;
+        transform: scale(0.6);
+
+      i {
+          color: black;
+          font-size: 30px;
+        }
+      }
+    }
   }
 }
 
-.family {
-  font-family: $profesional-font;
-}

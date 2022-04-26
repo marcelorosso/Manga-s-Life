@@ -1,6 +1,12 @@
 //---LOGIN CSS
 
 
+.loginSize {
+    @media (max-width: $lg) {
+        height: 300px;
+    }
+}
+
 // main login properties
 
 .login-box {
@@ -16,9 +22,9 @@
     border-radius: 10px;
     background: $dark-palett;
 
-    @media (max-width: 767px) {
-        width: 90%;
-        height: 400px;
+    @media (max-width: $sm) {
+        width: 80%;
+        height: 500px;
     }
 
     h2 {
@@ -26,6 +32,10 @@
         padding: 0;
         color: #fff;
         text-align: center;
+        box-shadow: 0 0 5px #03e9f4,
+                    0 0 25px #03e9f4,
+                    0 0 50px #03e9f4,
+                    0 0 100px #03e9f4;
     }
 
     a {
@@ -40,8 +50,6 @@
         transition: .5s;
         margin-top: 40px;
         letter-spacing: 4px
-
-        
     }
 
     a:hover {
@@ -184,6 +192,35 @@
 
 // Table (adding users data)
 
-td {
-    font-size: $small-text;
+.tableUsers {   
+    td {
+        font-size: $small-text;
+        @media (max-width: 355px) {
+            font-size: 0.3rem;
+            font-family: $profesional-font;
+        
+        }
+        @media (min-width: 355px) and (max-width: $sm) {
+            font-size: 0.5rem;
+            font-family: $profesional-font;
+        
+        }
+    }
+
+    h3 {
+        @media (max-width: $sm) {
+            font-size: 1.2rem;
+            font-family: $profesional-font;
+        }
+    }
+
+    p {
+        @media (max-width: $sm) {
+            font-weight: bolder;
+            font-size: 0.8rem;
+        }
+
+    }
 }
+
+

@@ -94,3 +94,15 @@
     line-height: 1.5;
     max-width: $width;
 }
+
+//--buttons--//
+
+@mixin storeButton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    color:black;
+    border: 2px solid green;
+    font-family: $profesional-newest;
+    font-weight: bolder;
+}

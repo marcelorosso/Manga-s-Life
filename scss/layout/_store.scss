@@ -1,47 +1,289 @@
+
+// Filters Section 
+
+.mangasList {
+
+    .filteringBy {
+        .btn-group {
+            padding-right: 6rem;
+    
+            @media (max-width: $sm) {
+                padding: 0px !important;
+            }
+
+            .btn-dark {
+                @include storeButton;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            }
+        }
+    }
+    
+// Filter and search products
+    .gridStore {
+        display: grid;
+        gap: 20px;
+    
+        @media (max-width: $md) {
+            @include flexBox (column, wrap, space-around, none);
+            gap: 0px;
+        }
+    
+        span, i {
+            font-size: 20px;
+        }
+    
+        .box {
+            grid-column: 1/4;
+            grid-row: 1/4;
+            max-width: 300px;
+    
+            @media (max-width: $sm) {
+                align-content: center;
+            }
+    
+            .filters {
+                display: flex;
+                flex-direction: column;
+            }
+    
+            .searchProducts {
+                margin-bottom: 15px;
+
+                #searchItem {
+                    font-family: $profesional-font;
+                    text-align: center;
+                }  
+            }
+    
+            h4 {
+                font-family: $profesional-newest;
+                color: #fff;
+                background: #03a9f4;
+                padding: 10px 20px;
+                font-size: 20px;
+                font-weight: 700;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+    
+                @media (max-width: $md) {
+                    display: none;
+                }
+            }
+            ul {
+                background: #fff;
+                height: 400px;
+                
+                @media (max-width: $md) {
+                    display: none;
+                }
+    
+                &:hover li{
+                    opacity: 0.2;
+                }
+                li {
+                    list-style:none;
+                    padding: 10px;
+                    width: 100%;
+                    background: #fff;
+                    box-shadow: 0 5px 25px rgba(0,0,0,.1);
+                    transition: transform 0.5s;
+                    font-family: $profesional-newest;
+    
+                    @media (max-width: $md) {
+                        display: inline-block;
+                        font-size: 20px;
+                    }
+        
+                    &:hover {
+                        transform: scale(1.1);
+                        z-index: 100;
+                        background: #25bcff;
+                        box-shadow: 0 5px 25px rgba(0,0,0,.2);
+                        color: #fff;
+                        opacity: 1;
+                    }
+        
+                    span {
+                        width: 20px;
+                        height: 20px;
+                        text-align: center;
+                        line-height: 20px;
+                        background: #25bcff;
+                        color: #fff;
+                        display: inline-block;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                        font-size: 12px;
+                        font-weight: 600;
+                        transform: translateY(-2px);
+    
+                        @media (max-width: $md) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }   
+        .gridProducts {
+            grid-column: 4/8;
+        } 
+    }
+    
+    .box ul li:hover span {
+        background: #fff;
+        color: #25bcff;
+    }    
+
+}
+
+
+// Cart Section
+
 .shop-item {
     box-sizing: inherit;
 }
 
 .section-header {
     padding-top: 20px;
-    font-family: $profesional-font;
+    font-family: $profesional-newest;
 }
 
 .zoom {
     img {
 
         width: 100%;
-        max-height: 261px;
+        max-height: 254px;
         margin: 15px 0;
         vertical-align: middle;
-        max-width: 339px;
+        max-width: 200px;
         height: auto;
-        transition: all 400ms;
-        border-radius: 10px;
+        transition: all 3s;
+        border-radius: 15px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
         &:hover {
-            transform: scale(1.05);
-            transition: all 400ms;
+            border-radius:50%;
+            box-shadow: 0px 0px 15px 15px #23A217;
+            transform: rotate(360deg);
+            transition: all 3s;
         }
     }
 }
 
+.row {
+    @media (max-width: $md) {
+        display: flex !important;
+        justify-content: center !important;
+    }   
+}
+
+.shop-item {
+    p {
+        font-size: 18px;
+        font-family: $profesional-newest;
+        font-weight: bolder;
+        color: green;
+    }
+}
 .price,
 .cart-item-title {
     padding-top: 50px;
+    @media (max-width: 548px) {
+        // padding-top: 0px;
+    }
 }
+
+.cart-item-title {
+    @media (max-width: 548px) {
+        display: none;
+    }
+}
+
 
 .cart-total {
     margin-top: 20px;
-    font-family: $profesional-font;
+    font-family: $profesional-newest;
     border: double black;
 }
 
-.btn-purchase,
-.shop-item-button {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: transparent;
-    color:black;
-    border: 2px solid green;
+.btn-purchase{
+    @include storeButton;
 }
+
+.shop-item-button {
+   @include storeButton;
+    &.appear {
+        opacity: 0.8;
+        font-style: italic;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+}
+
+.btn-danger {
+    @media (max-width: 548px) {
+        font-size: 12px;
+        margin-right: -27px !important;
+    }
+}
+
+
+// Cart counter
+
+.fa-opencart {
+    position: relative;
+}
+#counter {
+    user-select: none;
+    position: absolute;
+    background: white;
+    border: 1px solid green;
+    border-radius: 50%;
+    font-weight: bold;
+    width: 1.3rem;
+    height: 1.3rem;
+    font-size: .8rem;
+    top: 0rem;
+    left: 3.5rem;
+
+    @media (max-width: $sm) {
+        left: 5.5rem;
+    }
+
+    &:not(.animated-counter) {
+        display: none;
+    }
+}
+
+.animated-counter {
+    animation: count .4s ease-in-out;
+}
+
+@keyframes count {
+    from {
+        top: .2rem;
+        right: -1.8rem;
+        transform: rotate(120deg);
+    }
+    25% {
+        top: -.2rem;
+        right: -1.2rem;
+        transform: rotate(80deg);
+    }
+    50% {
+        top: -.4rem;
+        right: -.6rem;
+        transform: rotate(60deg);
+    }
+    75% {
+        top: -.4rem;
+        right: 0rem;
+        transform: rotate(30deg);
+    }
+    to {
+        top: .2rem;
+        right: 0.3rem;
+        transform: rotate(0deg);
+    }
+}
+
+

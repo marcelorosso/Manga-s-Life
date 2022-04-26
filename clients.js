@@ -1,59 +1,3 @@
-//Array de Objetos - Creación de Registro de Usuarios (push on web log to interact with it - login.html)
-
-/* Se procedió a crear una clase de usuarios registrados en la web, con el proposito de a través de una
-function de agregado de usuarios, ir incorporando nuevos users al array userList, el cual se activa al 
-presionar el logo de la página en la web de login. Con el buttom submit se vuelve al home o index.*/
-
-class Users {
-    constructor (personalName, address, location, mail, number,) {
-        this.id = Date.now();
-        this.name = personalName.toUpperCase();
-        this.address = address.toUpperCase();
-        this.city = location.toUpperCase();
-        this.mail = mail.toUpperCase();
-        this.cellphoneNumber = parseFloat (number);
-    }
-}
-
-const userList = [];
-userList.push (new Users ("marcelo rosso", "publica 1 norte 6920 - universitario", "cordoba", "rossomarcelogabriel@gmail.com", 3517911990));
-userList.push (new Users ("celeste massara", "publica 1 norte 6920 - universitario", "cordoba", "celemassara@gmail.com", 3513140020));
-
-function addUser () {
-    let nom = prompt ("Introduce the name and surname:");
-    let ad = prompt ("Introduce the address:");
-    let loc = prompt ("Introduce the city:");
-    let em = prompt ("Introduce the email:");
-    let cell = prompt ("Introduce the phone number:");
-    userList.push(new Users(nom, ad, loc, em, cell));
-    swal.fire ({
-        text: "Name and Surname: "  + nom + " " + "Address: " + ad + " " + "City: " + loc + " " + "E-mail: " + em + " " + "Cellphone Number: " + cell,
-        color: "green",
-        timer: 3500,
-        showConfirmButton: false
-    })
-    // alert ("Name and Surname: " + nom);
-    // alert ("Address: " + ad);
-    // alert ("City: " + loc);
-    // alert ("E-mail: " + em);
-    // alert ("Cellphone Number: " + cell);
-    console.table (userList); 
-}
-
-
-//EVENTOS PARA INGRESO DE USUARIOS Y CONTRASEÑAS EN LOGIN PAGE
-
-/* Se procedió a agregar simples eventos dentro de la página de login al sistema como usuario
-registrado. 
-
-- Se utilizó una clase creada para pequeñas modificaciones al hacer foco y salir del foco en los inputs
-- Un control de escritura simple
-- Un aviso de acuerdo a futuros desarrollos con relación a los registros del login
-*/
-
-// Variables
-
-
 
 const userName = document.querySelector("#userName");
 const userEmail = document.querySelector("#userEmail");
@@ -68,7 +12,7 @@ class UsersLog {
         this.id = Date.now();
         this.name = user.toUpperCase();
         this.email = email.toUpperCase();
-        this.password = password;
+        this.password = password.toUpperCase();
     }
 }
 
@@ -134,17 +78,6 @@ document.addEventListener("DOMContentLoaded", ()=> {
     submitBut.addEventListener("click", addUsers);
 })
 
-//Using spread and ? in order to see if the emails are the same for the same person.
-
-const joinUsersDate = [...usersLogin, ...userList];
-
-
-const verifiedMail = (joinUsersDate[0].email === joinUsersDate[2].mail)
-verifiedMail? console.log("The mail is the same") : console.log("The mail is different")
-
-const verifiedMail2 = (joinUsersDate[1].email === joinUsersDate[3].mail)
-verifiedMail2? console.log("The mail is the same") : console.log("The mail is different")
-
 // Login Events + Sweet Alert
 
 userName.addEventListener("keyup", (event) => {
@@ -172,7 +105,3 @@ submitBut.addEventListener("click", (event) => {
         timer: 1500
         })
 } )
-
-logoClick.addEventListener("click", (event)=> {
-    addUser();
-})

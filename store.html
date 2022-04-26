@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="assets/logos/favicon.ico">
+    <link rel="shortcut icon" href="assets/logos/mangas_icon.ico">
     <title>Manga-s-Life | Store</title>
 
     <!--bootstrapp-->
@@ -16,6 +16,8 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
@@ -30,67 +32,109 @@
     <!--css-->
     <link rel="stylesheet" href="./styles.css">
 
-    <!--javaScript-->
-    <script src="./variables.js" async></script> 
+    <!--javaScript--> 
     <script src="./store.js" async></script> 
 
 </head>
 <body>
-    <header>
+    <header class="storeHeader">
+        <!--Social Media-->
+        <section class="container-fluid d-flex justify-content-start hiddenSm">
+            <!--facebook-->
+            <a href="https://www.facebook.com/" target="_blank" class="navbar-brand icon" style=" font-size: 1rem;"><i class="fab fa-facebook-square" style="font-size: 20px;"></i></a>
+            <!--instagram-->
+            <a href="https://www.instagram.com/?hl=es" target="_blank" class="navbar-brand icon" style=" font-size: 1rem;"><i class="fab fa-instagram-square" style="font-size: 20px;"></i></a>
+        </section>
         <!--NAVBAR-->
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-12 col-sm-12 col-md-12 col-lg-12">
-                    <nav class="navbar navbar-expand-sm navbar navbar-expand-md navbar navbar-expand-lg navbar navbar-expand-xl navbar navbar-expand-xxl navbar-light" style="background-color: white; border-radius: 0.8rem;">
-                        <div class="container-fluid">
-                            <!--LOGO-->
-                            <div>
-                                <a href= "index.html" target="_self"><img src="assets/logos/manga_s_life_waifu2x.png" class="img" alt="Logo"></a>
-                            </div>
-                            <!--facebook-->
-                            <a href="https://www.facebook.com/" target="_blank" class="navbar-brand" style=" font-size: 1rem;">Facebook Icon</a>
-                            <!--instagram-->
-                            <a href="https://www.instagram.com/?hl=es" target="_blank" class="navbar-brand" style=" font-size: 1rem;">Instagram Icon</a>
-                            <!--return home and month anime link-->
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                    <!--month anime link-->
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="https://ar.pinterest.com/search/pins/?q=best%20manga%20fights%20scenes&rs=typed&term_meta[]=best%7Ctyped&term_meta[]=manga%7Ctyped&term_meta[]=fights%7Ctyped&term_meta[]=scenes%7Ctyped" target="_blank" style="font-size:medium;">Best Manga Fights</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!--LOGIN BUTTON-->
-                            <div class="col-sm-4 col-lg-3 col-md-4">
-                                <form class="d-flex justify-content-end button navbar-brand">
-                                    <button class="btn btn-outline-success" type="submit" style="background-color: black; width: 100%;"><a target="_self" style= "text-decoration: none; color: white;" href="login.html">User Login</a></button>
-                                </form>
-                            </div>
-                            <!--CART-->
-                            <div class="d-flex justify-content-end col-sm-2 col-lg-2 col-md-2 col-xl-1 navbar-brand">
-                                <buttom onclick ="newBuy()" style="cursor:pointer"><i class="fas fa-hand-holding-usd" style="color: green; font-size: 30px;"></i></buttom>
-                            </div>
-                            <div class="d-flex justify-content-end col-sm-2 col-lg-2 col-md-2 col-xl-1 navbar-brand">
-                                <buttom onclick ="loadAll()" id="cartBtn"><i class="fab fa-opencart" style="color: green; font-size: 30px; cursor:pointer"></i></buttom>
-                            </div>
-                        </div>    
-                    </nav>
+        <div class="menuHeader">
+            <!--HEADER PART I-->
+            <!--LOGO-->
+            <div>
+                <a href= "index.html" target="_self"><img src="/assets/logos/logo.jpeg" class="img" alt="Logo"></a>
+            </div>
+            <!--HEADER PART II-->
+            <div class="searchH">
+                <!--search icon-->
+                <form class="form-inline" action="/action_page.php">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Look For It!">
+                    <button class="btn btn-success" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="flexHeader">
+                <!--HOME BUTTON-->
+                <div class="d-flex flex-column navbar-brand">
+                    <a href="index.html"><i class="fas fa-home" style="font-size: 30px; cursor:pointer" id="homeBtn"></i></a>
+                    <span style="color: green; cursor:pointer">Home</span>
                 </div>
-            </div> 
+                <!--LOGIN BUTTON-->
+                <div class="d-flex flex-column navbar-brand">
+                    <a><i class="far fa-user" style="font-size: 30px; cursor:pointer" id="loginBtn"></i></a>
+                    <span style="color: green; cursor:pointer">Login</span>
+                </div>
+                <!--BY CREDIT-->
+                <div class="d-flex flex-column navbar-brand">
+                    <a><i class="fas fa-hand-holding-usd" style="font-size: 30px; cursor:pointer" id="discountBtn"></i></a>
+                    <span style="color: green; cursor:pointer">Discount Cupon</span>
+                </div>
+                <!--CART ICON-->
+                <div class="d-flex flex-column col-sm-2 col-lg-2 col-md-2 col-xl-1 navbar-brand">
+                    <a><i class="fab fa-opencart" style="font-size: 30px; cursor:pointer"></i></a>
+                    <span id="counter">0</span>
+                    <span style="color: green; cursor:pointer">Cart Counter</span>
+                </div>
+            </div>                  
         </div>
     </header>
     <main>
-        <section class="container-fluid" style="max-height: 4000px; height: 100%;">
+        <section class="container-fluid mangasList" style="max-height: 30000px; height: 100%;">
             <!--PRODUCT LIST-->
-            <h2 class="section-header">MANGAS LIST</h2>
-            <!-- Product List by using DOM and JSON Array-->
+            <h2 class="section-header" id="returnPoint">MANGAS LIST</h2>
             <hr>
-            <div id="shopList" class="d-flex justify-content-around row row-cols-4">
-                <div class="shop-item d-flex flex-column">
- 
+            <!--Sort Products by...-->
+            <div class="d-flex justify-content-end filteringBy" style="padding: 0.1rem;">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-dark">Sort by</button>
+                    <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" id="dropDownStore">
+                    </button>
+                    <div class="dropdown-menu">
+                      <button type="button" class="dropdown-item" id="nameButtonA">A - Z</button>
+                      <button type="button" class="dropdown-item" id="nameButtonZ">Z - A</button>
+                      <button type="button" class="dropdown-item" id="priceButtonL">Lower to Upper Price</button>
+                      <button type="button" class="dropdown-item" id="priceButtonU">Upper to Lower Price</button>
+                    </div>
                 </div>
             </div>
-            <hr>
+            <div class="gridStore">
+                <div class="box">
+                    <div class="d-flex filters">
+                        <!--Search Products by Name-->
+                        <div class="d-flex searchProducts">
+                            <form id="searchForm">
+                                <i class="fas fa-search"></i>
+                                <label for="searchItem"></label>
+                                <input type="text" name="" id="searchItem" placeholder="Search Product by Name">
+                            </form>
+                        </div>
+                        <h4>Select Manga Name</h4>
+                        <ul>
+                            <li id="manga1"><span>1</span>My Hero Academia</li>
+                            <li id="manga2"><span>2</span>Tokyo Revengers</li>
+                            <li id="manga3"><span>3</span>Hunter x Hunter</li>
+                            <li id="manga4"><span>4</span>Attack On Titan</li>
+                            <li id="manga5"><span>5</span>Kimetsu No Yaiba</li>
+                            <li id="manga6"><span>6</span>Tokyo Ghoul</li>
+                            <li id="manga7"><span>7</span>The Promised Nverland</li>
+                            <li id="manga8"><span>8</span>Jujutsu Kaisen</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gridProducts"></div>
+                <div id="shopList" class="d-flex justify-content-around row">
+                    <!-- Product List by using DOM and JSON Array-->
+                </div>
+                <hr>
+            </div>
+                
         </section>
         <!--CART-->
         <section class="container content-section" style="max-height: 2500px; height: 100%;">
@@ -114,7 +158,7 @@
         </section>
         <!--COMIENZO SECTION CONTACTO-->
         <hr>
-        <section class="container" data-aos="fade-up">
+        <section class="container" style="max-height: 1500px; height: 100%;" data-aos="fade-up">
             <!--titular principal-->
             <div>
                 <h2 style="margin-top: 25px;">Contacto</h2>
@@ -151,7 +195,7 @@
                     <div class="contact-info-item h-100">
                         <i class="far fa-envelope icon"></i>
                         <h3>Email</h3>
-                        <p>geek-w@gmail.com</p>
+                        <p>Manga-s-Life@gmail.com</p>
                     </div>
                 </div>
             </div>   
@@ -163,10 +207,11 @@
         
         <!--copyright-->
         <div class="copyright">
-            <h2 id="footerTittle">Footer Here!</h2>
+            <h2 id="footerTittle">Thanks for Visit Us!</h2>
+            <a href="#returnPoint">Return Up Button</a>
             <p>© 2022 Manga-S-Life. Todos los derechos reservados.<span>Desarrollado con <span class="heart">💜</span> por Marcelo Gabriel Rosso.</span></p>
             <div class="footer-social">
-                <a href="" target="_blank"><i class="fab fa-github" alt="github"></i></i></a>
+                <a href="" target="_blank"><i class="fab fa-github" alt="github"></i></a>
                 <a href="https://www.linkedin.com/in/marcelo-gabriel-rosso-6797369a/" target="_blank"><i class="fab fa-linkedin-in" alt="linkedin"></i></a>
             </div>
         </div>
@@ -189,10 +234,7 @@
 
     <!--sweet alerts2-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="adding_dom.js"></script>
-
-    <!--!Incorporé adding_DOm pero igualmente falla al hacer el reload.. A veces lo toma y a veces no-->
-
+    <script src="/pop_up.js"></script>
     
 </body>
 </html>
