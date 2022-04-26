@@ -110,7 +110,7 @@ getMangas(mangasJson) // EJECUCIÓN EN HTML
 
 function purchaseClicked(event) {
     Swal.fire({
-        imageUrl: '/assets/logos/logo.jpeg',
+        imageUrl: "/assets/logos/logo.jpg",
         imageWidth: 400,
         imageHeight: 350,
         imageAlt: 'Custom image',

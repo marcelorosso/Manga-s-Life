@@ -10,7 +10,7 @@
 
 * **Tutor:** Bruno Pedraza
 
-* **Desarrollado por la estudiante:** Marcelo Gabriel Rosso
+* **Desarrollado por el estudiante:** Marcelo Gabriel Rosso
 
 * **Proyecto final:** https://marcelorosso.github.io/Manga-s-Life/
 
