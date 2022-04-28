@@ -41,7 +41,6 @@ function ready() {
     for (let i = 0; i < addToCartButtons.length; i++) {
         let button = addToCartButtons[i];
         button.addEventListener("click", addToCartClicked);
-        button.addEventListener("click", cartCounter);
     }
 
     document.getElementsByClassName("btn-purchase")[0].addEventListener("click", purchaseClicked);
@@ -162,49 +161,8 @@ function addItemToCart(title, price, imageSrc) {
         </div>`
         cartRow.innerHTML = cartRowContents;
     cartItems.append(cartRow); 
-    cartRow.getElementsByClassName("cart-quantity-input")[0].addEventListener("change", quantityChanged);
-
-        const change = cartRow.getElementsByClassName("cart-quantity-input")
-        for (i = 0; i < change.length; i++) {
-            let quantityNow = change[i];
-            quantityNow.addEventListener("change", (e)=> {
-                const cl = counter.classList;
-                const c = "animated-counter";
-                const q = cartRow.getElementsByClassName("cart-quantity-input")[0].value
-                count = q
-            
-                counter.innerText = count;
-                cl.remove(c, cl.contains(c));
-                setTimeout(()=>
-                counter.classList.add("animated-counter"),1)
-            });  
-        }
-
-    // cartRow.getElementsByClassName("cart-quantity-input")[0].addEventListener("change", (e)=> {
-    //     const cl = counter.classList;
-    //     const c = "animated-counter";
-    //     const q = cartRow.getElementsByClassName("cart-quantity-input")[0].value
-    //     count = q
-
-    //     counter.innerText = count;
-    //     cl.remove(c, cl.contains(c));
-    //     setTimeout(()=>
-    //     counter.classList.add("animated-counter"),1)
-    // });  
-    
+    cartRow.getElementsByClassName("cart-quantity-input")[0].addEventListener("change", quantityChanged);  
     cartRow.getElementsByClassName("btn-danger")[0].addEventListener("click", removeCartItem);
-
-    cartRow.getElementsByClassName("btn-danger")[0].addEventListener("click", (e)=> {
-        const cl = counter.classList;
-        const c = "animated-counter";
-        const q = cartRow.getElementsByClassName("cart-quantity-input")[0].value
-        count = count - q
-
-        counter.innerText = count;
-        cl.remove(c, cl.contains(c));
-        setTimeout(()=>
-        counter.classList.add("animated-counter"),1)
-    });  
 }
 
 //Cart remove function
@@ -283,7 +241,23 @@ const searchByName = document.getElementById("searchItem").addEventListener("key
     ready()
 })
 
-// sort by Name, Category and Price
+const searchHeader = document.getElementById("searchHeader").addEventListener("keyup", (e) => {
+    const value = e.target.value
+    console.log(value)
+    const filterMangas = showProducts.filter( mangas => mangas.name.toLowerCase().includes(value));
+    display(filterMangas, mangas, true);
+
+    if (filterMangas.length < 1) {
+        mangas.innerHTML = `
+        <div>
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>Sorry! Doesn't exist products with these name.</span>
+        </div>`
+    }
+    ready()
+})
+
+// sort by Name and Price
 
 const sortByNameA = document.getElementById("nameButtonA").addEventListener("click", (e) => {
     const sortByNameMangas = showProducts.sort( (a, b) => {
@@ -345,7 +319,7 @@ const sortByPriceU= document.getElementById("priceButtonU").addEventListener("cl
     ready()
 })
 
-// Filter by Category
+// Filter by Collection 
 
 document.getElementById("manga1").addEventListener("click", ()=> {
     const categoriesF = showProducts.filter(manga => manga.commonName === "My Hero");
@@ -403,40 +377,6 @@ document.getElementById("manga8").addEventListener("click", ()=> {
     ready();
 }) 
 
-
-
-//! Cart Counter
-
-// It counts the products which are adding to the cart (header cart icon)
-
-let count = 0;
-const counter = document.getElementById("counter");
-
-function cartCounter() {
-        const cl = counter.classList;
-        const c = "animated-counter";
-        count++;
-
-        // count > 2 ? count= 0 : count;
-        count < 0 ? count = 0 : count;
-
-        counter.innerText = count;
-        cl.remove(c, cl.contains(c));
-        setTimeout(()=>
-        counter.classList.add("animated-counter"),1)
-}
-
-// Products are delete and the counter disappear once the button "purchase" is pressed.
-
-document.getElementsByClassName("btn-purchase")[0].addEventListener("click", (e)=> {
-    const cl = counter.classList;
-    const c = "animated-counter";
-    count = 0;
-
-    counter.innerText = count;
-    cl.remove(c, cl.contains(c));
-});    
- 
 //! Header scroll effects
 
 window.addEventListener("scroll", ()=> {

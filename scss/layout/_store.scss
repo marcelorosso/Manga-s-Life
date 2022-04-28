@@ -144,7 +144,7 @@
 }
 
 .section-header {
-    padding-top: 20px;
+    padding-top: 35px;
     font-family: $profesional-newest;
 }
 
@@ -225,65 +225,4 @@
         margin-right: -27px !important;
     }
 }
-
-
-// Cart counter
-
-.fa-opencart {
-    position: relative;
-}
-#counter {
-    user-select: none;
-    position: absolute;
-    background: white;
-    border: 1px solid green;
-    border-radius: 50%;
-    font-weight: bold;
-    width: 1.3rem;
-    height: 1.3rem;
-    font-size: .8rem;
-    top: 0rem;
-    left: 3.5rem;
-
-    @media (max-width: $sm) {
-        left: 5.5rem;
-    }
-
-    &:not(.animated-counter) {
-        display: none;
-    }
-}
-
-.animated-counter {
-    animation: count .4s ease-in-out;
-}
-
-@keyframes count {
-    from {
-        top: .2rem;
-        right: -1.8rem;
-        transform: rotate(120deg);
-    }
-    25% {
-        top: -.2rem;
-        right: -1.2rem;
-        transform: rotate(80deg);
-    }
-    50% {
-        top: -.4rem;
-        right: -.6rem;
-        transform: rotate(60deg);
-    }
-    75% {
-        top: -.4rem;
-        right: 0rem;
-        transform: rotate(30deg);
-    }
-    to {
-        top: .2rem;
-        right: 0.3rem;
-        transform: rotate(0deg);
-    }
-}
-
 

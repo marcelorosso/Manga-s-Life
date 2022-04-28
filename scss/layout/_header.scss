@@ -24,34 +24,55 @@
     }
 
     .menuHeader {
-        @include flexBox (flex,nowrap,space-evenly,center);
+        // @include flexBox (flex,nowrap,space-evenly,center);
         background-color: white;
         border-bottom: 1px solid lightgreen;
+        display: grid;
 
-        @media (max-width: $lg) {
+        @media (max-width: $sm) {
             display: flex;
             flex-direction: column;
         }
 
         .searchH {
+            grid-row: 1/1;
+            grid-column: 3/8;
             display: flex;
             justify-content: center;
+
+            i {
+                color: green;
+                font-size: 30px;
+            }
         }
 
         .form-inline {
 
-            @media (max-width: $lg) {
+            @media (max-width: 767px) {
                 display: none;
             }
         }
+        .mangaL {
+            grid-row: 1/1;
+            grid-column: 2/3;
 
-        img {
-            max-width: 250px;
+            @media (max-width: $sm) {
+                display: flex;
+                justify-content: center;
+            }
+
+            img {
+                max-width: 280px;
+                height: 100%;
+                max-height: 162px;
+            }
         }
     }
 
     .flexHeader {
-        @include flexBox (flex, nowrap, space-around, none);
+        grid-row: 1/1;
+        grid-column: 8/12;
+        @include flexBox (flex, nowrap, space-around, center);
     }
     .navbar-brand {
         transition: all 400ms;
