@@ -9,6 +9,13 @@
     
             @media (max-width: $sm) {
                 padding: 0px !important;
+                margin-right: 52px;
+            }
+
+            .dropdown-item {
+                @media (max-width: $sm) {
+                    font-size: 12px;
+                }
             }
 
             .btn-dark {

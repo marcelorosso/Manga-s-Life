@@ -1038,6 +1038,13 @@ footer {
 @media (max-width: 576px) {
   .mangasList .filteringBy .btn-group {
     padding: 0px !important;
+    margin-right: 52px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mangasList .filteringBy .btn-group .dropdown-item {
+    font-size: 12px;
   }
 }
 
