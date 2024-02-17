@@ -109,7 +109,7 @@ getMangas(mangasJson) // EJECUCIÓN EN HTML
 
 function purchaseClicked(event) {
     Swal.fire({
-        imageUrl: "assets/logos/logo.jpg",
+        imageUrl: "assets/logos/Logo_Majin_Vegetta.jpg",
         imageWidth: 400,
         imageHeight: 350,
         imageAlt: 'Custom image',
