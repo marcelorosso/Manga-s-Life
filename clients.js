@@ -17,8 +17,6 @@ class UsersLog {
 }
 
 const usersLogin = [];
-usersLogin.push(new UsersLog("marcelito", "rossomarcelogabriel@gmail.com", "rosso771"));
-usersLogin.push(new UsersLog("celemassara", "cele_massara@hotmail.com", "cele843"));
 
 // FUNCIÓN ESPECIAL PARA RECOPILAR DATOS DE USUARIOS REGISTRADOS Y MOSTRARLOS POR TABLA (JSON AND LOCALSTORAGE)
 
